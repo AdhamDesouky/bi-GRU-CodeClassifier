@@ -44,6 +44,28 @@ The dataset used contains labeled programming code snippets for four languages:
 - **Original Samples**: 16,342
 - **Balanced Samples per Class (After Oversampling)**: 4,546 for each class.
 
+### Dataset Description
+
+The dataset used in this project was scraped from various online sources to ensure a diverse range of comments and data. However, raw data collected from the internet often contains significant noise and inconsistencies. To address this, the following preprocessing steps were undertaken:
+
+1. **Duplicate Removal**: The dataset initially contained a substantial number of duplicate entries due to overlapping data from different sources. These duplicates were systematically identified and removed to ensure each entry was unique.
+
+2. **Language Filtering**: Since the focus was on English-language comments, all non-English entries were filtered out using language detection techniques. This step ensured consistency in analysis and model performance.
+
+3. **Null Value Handling**: Entries with missing or null values in critical fields were excluded from the dataset to maintain data integrity.
+
+4. **Non-Alphanumeric Character Removal**: The dataset included comments with extraneous non-alphanumeric characters. These were removed or replaced with meaningful tokens where necessary to standardize the text.
+
+5. **HTML and Formatting Tags**: Any residual HTML tags or formatting artifacts were stripped from the data to provide clean, plain-text entries.
+
+6. **Stopword and Noise Removal**: Common stopwords and irrelevant noise (e.g., random sequences of numbers or symbols) were eliminated to enhance the quality of the data for analysis.
+
+7. **Text Normalization**: This involved converting text to lowercase, expanding contractions, and standardizing spelling variations.
+
+8. **Comment Length Filtering**: Comments that were excessively short or long (beyond a reasonable threshold) were removed to ensure the dataset contained meaningful, analyzable content.
+
+These preprocessing steps resulted in a high-quality, well-structured dataset, suitable for analysis and model training.
+
 ### Class Distribution Visualization
 
 The class distribution is visualized post-oversampling for uniformity using a bar chart.
